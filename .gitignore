@@ -1,0 +1,16 @@
+node_modules
+coverage
+dist
+scrap
+fixed
+ext
+
+.git-*
+
+postgres-config.json
+data
+
+ext/pubby
+ext/marmotta
+ext/marmotta-home/**/*
+!ext/marmotta-home/system-config.properties

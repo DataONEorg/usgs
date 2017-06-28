@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+	head
+		title USGS Linked-Data
+		link(rel='stylesheet', type='text/css', href='/styles/pub.css')
+		link(rel='stylesheet', type='text/css', href='/resource/leaflet.css')
+		script(src='/scripts/pub.js')
+	body
+		h1.title USGS
+		h4.purl
+			a.purl-link w3id.org Permanent URL for this resource
+		div#controls
+			#same-as-toggle
+				input(type="checkbox")
+				label Show owl:sameAs relations to external resources
+		#layout
+			section.triples
+				div.card-space
+					.front
+						.human
+							.header
+							.body
+								.outgoing.table
+									div.loading
+										span.fa.fa-spin.fa-circle-o-notch
+										| loading relations...
+								.incoming.table
+									div.loading
+										span.fa.fa-spin.fa-circle-o-notch.notch-spin
+										| loading inverse relations...
+					.back
+						.machine
+							.header
+							.body
+								div#rdf-display
+			section#map
